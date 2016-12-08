@@ -19,6 +19,8 @@
     'csrfToken' => csrf_token(),
 ]); ?>
     </script>
+
+    @yield('styles')
 </head>
 <body>
     <div id="app">

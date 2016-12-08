@@ -20,3 +20,5 @@ Route::get('/register-ajax', 'UserController@create');
 Route::get('/home', 'HomeController@index');
 Route::resource('users', 'UserController');
 Route::resource("tweets", "TweetController");
+Route::get('/users', 'DatatablesController@index');
+Route::any('/data', 'DatatablesController@anyData')->name('datatables.data');
