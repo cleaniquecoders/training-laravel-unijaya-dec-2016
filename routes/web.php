@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/phpexcel', function () {
+    Excel::create('New file', function ($excel) {
+        $excel->sheet('New sheet', function ($sheet) {
+            $users = App\User::all();
+            $sheet->loadView('exports.excel.users.index', compact('users'));
+        });
+    })->download('xls');
+});
+
 Auth::routes();
 Route::get('/register-ajax', 'UserController@create');
 Route::get('/home', 'HomeController@index');
