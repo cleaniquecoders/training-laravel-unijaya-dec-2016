@@ -168,6 +168,7 @@ return [
          */
 
         CleaniqueCoders\ArtisanExtended\ArtisanExtendedServiceProvider::class,
+        Laralib\L5scaffold\GeneratorsServiceProvider::class,
 
         /*
          * Application Service Providers...
